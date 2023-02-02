@@ -6,22 +6,22 @@ agent{
 stages{ 
  stage('compile/build'){
     steps{
-      ehco 'compile'
+      echo 'compile'
         }
     }
  stage('unit-test'){
     steps{
-        ehco 'unit-test'
+        echo 'unit-test'
         }
     }
 stage('quality-control'){
     steps{
-        ehco 'quality-control'
+        echo 'quality-control'
         }
     }
 stage('upload code to centrailzed palce'){
     steps{
-        ehco 'upload'
+        echo 'upload'
         }
     }
 

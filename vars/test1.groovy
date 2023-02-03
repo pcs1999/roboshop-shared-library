@@ -3,4 +3,7 @@ def new1() {
     def abc= "hyderabad"
 
     print abc
+if ( pcs== "super") {
+    print "satisfied"
+}
 }

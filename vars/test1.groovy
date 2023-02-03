@@ -1,18 +1,6 @@
-@Library('roboshop') _
+def new1() {
+    print "hellow"
+    def abc= "hyderabad"
 
-pipeline {
-    agent any 
-    stages {
-        stage('test1') {
-         steps {
-            script {
-                def chandra = "firstname"
-                def shekar = "lastname"
-
-                print chandra
-                print shekar 
-            }
-         }
-        }
-    }
+    print abc
 }

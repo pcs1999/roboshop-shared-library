@@ -1,3 +1,5 @@
+@Library ('roboshop')
+
 pipeline {
     agent any 
     stages {

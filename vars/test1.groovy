@@ -3,11 +3,11 @@
 pipeline {
     agent any 
     stages {
-        stage('test') {
+        stage('test1') {
          steps {
             script {
-                def chandra = "first name"
-                def shekar = "last name"
+                def chandra = "firstname"
+                def shekar = "lastname"
 
                 print chandra
                 print shekar 

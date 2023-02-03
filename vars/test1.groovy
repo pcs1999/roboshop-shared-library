@@ -5,5 +5,5 @@ def new1() {
     print abc
 if ( pcs== "super") {
     print "satisfied"
-}
+} else print {"not satisfied"}
 }

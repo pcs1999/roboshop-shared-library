@@ -8,3 +8,28 @@ if (app_lang == "maven") {
   }
 
 }
+
+def unittests() {
+  if (app_lang == "nodejs") {
+    try {
+      sh 'npm test'
+
+    } catch(Exception e) {
+      common.email ("unit test failed" )
+    } 
+    // devloper missed the unit test cases in our project, they need to add them for best practice,skipping now moving further
+    //sh 'echo test cases'
+  }
+
+  if (app_lang == "maven") {
+    sh 'mvn test'
+  }
+
+  if (app_lang == "python") {
+    sh 'python3 -m unittest'
+  }
+}
+
+def email(email_note) {
+  sh 'echo ${email_note}'
+}

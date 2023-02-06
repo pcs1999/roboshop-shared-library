@@ -15,7 +15,7 @@ def unittests() {
       sh 'npm test'
 
     } catch(Exception e) {
-      common.email ("unit test failed" )
+      email ("unit test failed" )
     } 
     // devloper missed the unit test cases in our project, they need to add them for best practice,skipping now moving further
     //sh 'echo test cases'
@@ -31,5 +31,5 @@ def unittests() {
 }
 
 def email(email_note) {
-  sh 'echo ${email_note}'
+  println email_note
 }

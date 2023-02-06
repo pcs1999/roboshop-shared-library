@@ -1,4 +1,5 @@
 def call () {
+    try {
     pipeline{
 agent{
      label 'work-station'
@@ -31,5 +32,7 @@ stage('upload code to centrailzed palce'){
 
 
    } 
+}} catch (Exception e){
+    common.email('failed')
 }
 }

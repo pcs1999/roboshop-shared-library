@@ -11,12 +11,7 @@ if (app_lang == "maven") {
 
 def unittests() {
   if (app_lang == "nodejs") {
-    try {
-      sh 'npm test'
-
-    } catch(Exception e) {
-      email ("unit test failed" )
-    } 
+   sh 'npm test'
     // devloper missed the unit test cases in our project, they need to add them for best practice,skipping now moving further
     //sh 'echo test cases'
   }

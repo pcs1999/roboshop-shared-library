@@ -26,5 +26,4 @@ def unittests() {
 }
 
 def email(email_note) {
-  println email_note
-}
+mail bcc: '', body: 'testing the sysntax', cc: '', from: 'cp7524420@gmail.com', replyTo: '', subject: 'testing mail from jenkins ui', to: 'cp7524420@gmail.com'}

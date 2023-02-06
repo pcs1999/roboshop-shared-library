@@ -4,17 +4,18 @@ def compile() {
     sh 'env'
   }
 
-if (app_lang == "maven") {
+  if (app_lang == "maven") {
     sh 'mvn package'
   }
 
 }
 
 def unittests() {
+
   if (app_lang == "nodejs") {
-   sh 'npm test'
-    // devloper missed the unit test cases in our project, they need to add them for best practice,skipping now moving further
-    //sh 'echo test cases'
+    // Developer is missing unit test cases in our project, He need to add them as best practice, We are skipping to proceed further
+          sh 'npm test'
+
   }
 
   if (app_lang == "maven") {
@@ -27,5 +28,5 @@ def unittests() {
 }
 
 def email(email_note) {
-mail bcc: '', body: "job failed- ${JOB_BASE_NAME}\nJenkins URL - ${JOB_URL}", cc: '', from: 'cp7524420@gmail.com', replyTo: '', subject: "jenkins job failed - ${JOB_BASE_NAME}", to: 'cp7524420@gmail.com'
+  mail bcc: '', body: "Job Failed - ${JOB_BASE_NAME}\nJenkins URL - ${JOB_URL}", cc: '', from: 'cp7524420@gmail.com', replyTo: '', subject: "Jenkins Job Failed - ${JOB_BASE_NAME}", to: 'cp7524420@gmail.com'
 }

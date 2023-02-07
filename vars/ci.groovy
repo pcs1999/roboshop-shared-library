@@ -3,7 +3,7 @@ ef call() {
     pipeline {
 
       agent {
-        label 'workstation'
+        label 'work-station'
       }
 
       stages {

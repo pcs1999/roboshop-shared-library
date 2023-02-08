@@ -1,7 +1,7 @@
 def call() {
 
-  if(!env.SONAR_EXTRA_OPTS) {
-    env.SONAR_EXTRA_OPTS = " "
+  if(!env.java_opt) {
+    env.java_opt = " "
   }
 
   try {

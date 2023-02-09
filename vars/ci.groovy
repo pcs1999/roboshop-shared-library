@@ -34,8 +34,8 @@ def call() {
           sh "sonar-scanner -Dsonar.host.url=http://172.31.12.42:9000 -Dsonar.login=${SONAR_USER} -Dsonar.password=${SONAR_PASS} -Dsonar.projectKey=${component} -Dsonar.qualitygate.wait=true ${java_opt}"
         }
       }
-      if (env.PUSH_CODE = 'true'){
-       stage('Upload Code to Centralized Place') {
+      if (env.PUSH_CODE == 'true') {
+      stage('Upload Code to Centralized Place') {
         echo 'Upload'
       } 
       }

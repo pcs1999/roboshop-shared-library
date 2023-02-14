@@ -33,12 +33,13 @@ def email(email_note) {
 
 def artifactPush() {
   sh "echo ${TAG_NAME} >VERSION"
+
   if (app_lang == "nodejs") {
     sh "zip -r ${component}-${TAG_NAME}.zip node_modules server.js VERSION  ${extrafiles}"
   }
   
-  if (app_lang == "nginx") {
-    sh "zip -r ${component}-${TAG_NAME}.zip * -x Jenkinsfile"
+  if (app_lang == "nginx" || app_lang == "python" ) {
+    sh "zip -r ${component}-${TAG_NAME}.zip * -x jenkinsfile"
   }
 
   sh 'ls -l'

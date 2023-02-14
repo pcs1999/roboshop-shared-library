@@ -3,6 +3,10 @@ def call() {
   if(!env.java_opt) {
     env.java_opt = " "
   }
+
+  if(!env.extrafiles) {
+    env.extrafiles = " "
+  }
  
  if (!env.TAG_NAME){
      env.PUSH_CODE = 'false' 

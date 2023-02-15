@@ -39,7 +39,7 @@ def artifactPush() {
   }
   
   if (app_lang == "nginx" || app_lang == "python" ) {
-    sh "zip -r ${component}-${TAG_NAME}.zip * -x jenkinsfile"
+    sh "zip -r ${component}-${TAG_NAME}.zip * -x Jenkinsfile"
   }
 
   sh 'ls -l'

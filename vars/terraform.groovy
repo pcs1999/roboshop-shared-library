@@ -8,7 +8,7 @@ def call () {
             
         }
     parameters {
-        string(name: 'INFRA_ENV', defaultValue: '', decryption: 'hi hello welcome')
+        string(name: 'INFRA_ENV', defaultValue: '', description: 'hi hello welcome')
     }
 
     stages {

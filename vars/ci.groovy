@@ -29,6 +29,7 @@ def call() {
 
       stage('Unit Tests') {
         common.unittests()
+        
       }
 
       stage('Quality Control') {
@@ -36,6 +37,11 @@ def call() {
         SONAR_USER = sh ( script: 'aws ssm get-parameters --region us-east-1 --names sonarqube.user  --with-decryption --query Parameters[0].Value | sed \'s/"//g\'', returnStdout: true).trim()
         wrap([$class: 'MaskPasswordsBuildWrapper', varPasswordPairs: [[password: "${SONAR_PASS}", var: 'SECRET']]]) {
           sh "sonar-scanner -Dsonar.host.url=http://172.31.12.42:9000 -Dsonar.login=${SONAR_USER} -Dsonar.password=${SONAR_PASS} -Dsonar.projectKey=${component} -Dsonar.qualitygate.wait=true ${java_opt}"
+        }
+      }
+      if (app_lang == "maven") {
+        stage ('Build package') {
+          sh "mvn package && cp target/${component}-1.0.jar ${component}.jar"
         }
       }
       if (env.PUSH_CODE == 'true') {

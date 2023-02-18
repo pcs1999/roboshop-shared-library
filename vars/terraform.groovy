@@ -2,7 +2,7 @@ def call () {
     pipeline {
         agent {
             node {
-                label = 'work-station'
+                label 'work-station'
             }
         
             

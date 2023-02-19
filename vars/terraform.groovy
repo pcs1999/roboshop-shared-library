@@ -1,7 +1,7 @@
 def call () {
     pipeline {
         options {
-            ansicolor('xterm')
+            ansiColor('xterm')
         }
         agent {
             node {

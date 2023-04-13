@@ -27,11 +27,11 @@ def call() {
         }
       }
 
-      stage('quality controll') {
+      stage('quality control') {
 
         steps {
 
-          echo 'quality controll'
+          echo 'quality control'
         }
       }
 
@@ -50,6 +50,8 @@ def call() {
   }
 
 }
+
+
 
 
 

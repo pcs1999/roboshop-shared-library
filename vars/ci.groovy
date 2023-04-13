@@ -35,21 +35,22 @@ def call() {
         }
       }
 
-    }
+      stage('upload code to centralized place') {
 
+        steps {
 
-    stage('upload code to centralized place') {
-
-      steps {
-
-        echo 'upload code to centralized place'
+          echo 'upload code to centralized place'
+        }
       }
+
     }
+
+
 
   }
 
 }
-}
+
 
 
 

@@ -1,6 +1,6 @@
 def call() {
 
-  pipeline{
+  pipeline {
 
     agent {
 
@@ -10,7 +10,7 @@ def call() {
 
     stages {
 
-      stage ('compile/build') {
+      stage('compile/build') {
 
         steps {
 
@@ -19,7 +19,7 @@ def call() {
       }
 
 
-      stage ('unit/test') {
+      stage('unit/test') {
 
         steps {
 
@@ -27,7 +27,7 @@ def call() {
         }
       }
 
-      stage ('quality controll') {
+      stage('quality controll') {
 
         steps {
 
@@ -38,7 +38,7 @@ def call() {
     }
 
 
-    stage ('upload code to centralized place') {
+    stage('upload code to centralized place') {
 
       steps {
 
@@ -49,7 +49,7 @@ def call() {
   }
 
 
+ }
 
 
-}
 

@@ -26,5 +26,5 @@ def unittests () {
 }
 
 def email (email_note){
-    mail bcc: '', body: "failure in : ${JOB_BASE_NAME}\nTake a look with url\n display_URL:${RUN_DISPLAY_URL}\n jenkins_URL:${JENKINS_URL}" , cc: '', from: 'pcs04031999@gmail.com', replyTo: '', subject: "Jenkins job:${JOB_BASE_NAME} Failure notification", to: 'cp7524420@gmail.com'
+    mail bcc: '', body: "failure in : ${JOB_BASE_NAME} pipeline\nTake a look with url\nDisplay_URL:${RUN_DISPLAY_URL}\n jenkins_URL:${JENKINS_URL}" , cc: '', from: 'pcs04031999@gmail.com', replyTo: '', subject: "Jenkins job:${JOB_BASE_NAME} Failure notification", to: 'cp7524420@gmail.com'
 }

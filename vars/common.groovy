@@ -11,7 +11,7 @@ def compile () {
 def unittests () {
     if (app_lang == "nodejs") {
         // in our project developer not written any unittest cases
-        sh 'npm test || true'
+        sh 'npm test '
     }
 
     if (app_lang == "maven") {

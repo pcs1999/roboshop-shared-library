@@ -24,7 +24,9 @@ def call() {
 
         steps {
 
-          echo 'unit-test'
+          script {
+            common.unittests()
+          }
         }
       }
 

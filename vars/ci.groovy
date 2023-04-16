@@ -4,7 +4,7 @@ def call() {
 
       stage('scripted checkout of scm') {
         cleanWs()
-        git branch: 'main', url: 'https://github.com/pcs1999/${component}.git'
+        git branch: 'main', url: "https://github.com/pcs1999/${component}.git"
       }
 
       stage('Compile/Build') {

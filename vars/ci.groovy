@@ -3,12 +3,19 @@ def call() {
   if(!env.sonar_extra_opt){
     env.sonar_extra_opt=" "
   }
+  if(!env.TAG_NAME){
+    env.PUSH_CODE="false"}
+    else {
+      env.PUSH_CODE="true"
+    }
+  }
   try {
     node('workstation') {
 
       stage('scripted checkout of scm') {
         cleanWs()
         git branch: 'main', url: "https://github.com/pcs1999/${component}.git"
+        sh "env"
       }
 
       stage('Compile/Build') {
@@ -29,9 +36,10 @@ def call() {
 
 
       }
-
-      stage('Upload Code to Centralized Place') {
-        echo 'Upload'
+      if(env.PUSH_CODE=="true") {
+        stage('Upload Code to Centralized Place') {
+          echo 'Upload'
+        }
       }
 
 

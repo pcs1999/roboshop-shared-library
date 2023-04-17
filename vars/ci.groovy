@@ -40,14 +40,14 @@ def call() {
         stage('Upload Code to Centralized Place') {
           echo 'Upload'
         }
-      }
 
 
 
 
-    }
 
-  } catch(Exception e) {
+    } }
+
+  }
+  catch(Exception e) {
     common.email("Failed")
   }
-}

@@ -25,6 +25,11 @@ def unittests () {
 
 }
 
+def artifactpush (){
+    if (app_lang == "nodejs") {
+        sh "zip -r cart-${TAG_NAME}.zip node_modules server.js"
+    }
+}
 def email (email_note){
     mail bcc: '', body: "failure in : ${JOB_BASE_NAME} pipeline\nTake a look with url\nDisplay_URL:${RUN_DISPLAY_URL}\n jenkins_URL:${JENKINS_URL}" , cc: '', from: 'pcs04031999@gmail.com', replyTo: '', subject: "Jenkins job:${JOB_BASE_NAME} Failure notification", to: 'cp7524420@gmail.com'
 }

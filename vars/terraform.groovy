@@ -7,7 +7,7 @@ def call(){
 
         }
 
-        prameters{
+        parameters{
             string(name:'INFRA_ENV', defaultvalue: '', description: 'enter env like dev or prod')
         }
 

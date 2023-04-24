@@ -21,6 +21,23 @@ def call(){
 
                     sh "terraform init -backend-config=env-${INFRA_ENV}/state.tfvars"
                 }
+
+
+            }
+            stage('terraform apply'){
+
+                steps{
+
+                    sh "terraform apply -auto-approve -var-file=env-${INFRA_ENV}/main.tfvars"
+                }
+
+
+            }
+        }
+
+        post{
+            always {
+                cleanws()
             }
         }
     }

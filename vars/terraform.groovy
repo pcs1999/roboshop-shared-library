@@ -25,7 +25,7 @@ def call(){
 
 
             }
-            stage('terraform apply'){
+            stage('terraform action'){
 
                 steps{
 

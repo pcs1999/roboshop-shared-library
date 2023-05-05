@@ -25,7 +25,7 @@ def call(){
 
 
             }
-            stage('terraform action'){
+            stage('terraform action' ${ACTION}){
 
                 steps{
 

@@ -11,7 +11,8 @@ def call(){
         }
 
         parameters{
-            string(name:'INFRA_ENV', defaultValue: '', description: 'enter env like dev or prod')
+//          string(name:'INFRA_ENV', defaultValue: '', description: 'enter env like dev or prod')
+            choice(name: 'INFRA_ENV', choices: ['dev', 'prod'], description: 'enter env like dev or prod')
             choice(name: 'ACTION', choices: ['apply', 'destroy'], description: 'Pick something')
         }
 

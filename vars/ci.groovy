@@ -20,7 +20,7 @@ def call() {
 
       stage('Scripted Checkout:SCM') {
         cleanWs()
-        git branch: 'main', url: "https://github.com/raghudevopsb70/${component}"
+        git branch: 'main', url: "https://github.com/pcs1999/${component}.git"
         sh 'env'
       }
 

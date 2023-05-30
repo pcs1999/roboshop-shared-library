@@ -50,7 +50,7 @@ def artifactpush (){
 //        sh "zip -r ${component}-${TAG_NAME}.zip * -x Jenkinsfile ${extra_files}"
 //    }
 //
-//    if (app_lang == "maven") {
+//    if (app_lang == "maven")  {
 //        sh "zip -r ${component}-${TAG_NAME}.zip  ${component}.jar VERSION ${extra_files}"
 //    }
 //
